@@ -43,9 +43,9 @@ fun mainMenu(): Int {
     return readNextInt(
         """ 
          > ----------------------------------
-         > |        NOTE KEEPER APP         |
+         > |        BOXER APP         |
          > ----------------------------------
-         > | NOTE MENU                      |
+         > | BOXER MENU                      |
          > |   1) Add boxer                  |
          > |   2) List boxers                |
          > |   3) Update a boxer             |
