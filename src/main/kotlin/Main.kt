@@ -46,35 +46,35 @@ fun mainMenu(): Int {
          > |        NOTE KEEPER APP         |
          > ----------------------------------
          > | NOTE MENU                      |
-         > |   1) Add Boxer                  |
-         > |   2) List Boxers                |
-         > |   3) Update a Boxer            |
-         > |   4) Delete a Boxer             |
-         > |   5) Archive a Boxer            |
-         > |   6) List first Boxer           |
-         > |   7) List archived Boxers       |
-         > |   8) number of Boxers           |
+         > |   1) Add boxer                  |
+         > |   2) List boxers                |
+         > |   3) Update a boxer             |
+         > |   4) Delete a boxer             |
+         > |   5) Archive a boxer            |
+         > |   6) List first boxer           |
+         > |   7) List archived boxers       |
+         > |   8) number of boxers           |
          > |--------------------------------|
-         > |   9) Search Boxers              |
+         > |   9) Search boxers              |
          > |--------------------------------|
-         > |   20) Save Boxers               |
-         > |   21) Load Boxers               |
+         > |   20) Save boxers               |
+         > |   21) Load boxers               |
          > |   0) Exit                      |
          > ----------------------------------
          > ==>> """.trimMargin(">")
     )
 }
 
-fun addBoxer() {
-    //logger.info { "addNote() function invoked" }
-    val boxerName = readNextLine("Enter a name for the Boxer: ")
-    var boxerWins = readNextInt("Enter number of wins (1, 2, 3, 4, 5, 6, 7, 8, 9, 10): ")
-    if (!validRange(boxerWins,1,10)){BoxerWins = readNextInt("Enter number of wins (1, 2, 3, 4, 5, 6, 7, 8, 9, 10): ") }
+fun addboxer() {
 
-    var boxerClass = readNextLine("Enter a category for the Boxer: ")
-    if (!isValidClass(boxerClass)){boxerClass = readNextLine("Enter a weight class for the Boxer: ")}
+    val boxerName = readNextLine("Enter a name for the boxer: ")
+    var boxerWins = readNextInt("Enter the number of wins (1, 2, 3, 4, 5, 6, 7, 8, 9, 10): ")
+    if (!validRange(boxerWins,1,10)){boxerWins = readNextInt("Enter the number of wins (1, 2, 3, 4, 5, 6, 7, 8, 9, 10): ") }
 
-    val isAdded = boxerAPI.add(Boxer(boxerName, boxerWins, boxerClass, false))
+    var boxerClass = readNextLine("Enter a weight class for the boxer: ")
+    if (!isValidClass(BoxerClass)){BoxerClass = readNextLine("Enter a weight class for the boxer: ")}
+
+    val isAdded = boxerAPI.add(Boxer(boxerName, boxerWins, BoxerClass, false))
 
     if (isAdded) {
         println("Added Successfully")
@@ -84,13 +84,13 @@ fun addBoxer() {
 }
 
 fun listBoxers() {
-    if (boxerAPI.numberOfBoxers() > 0) {
+    if (boxerAPI.numberOfNotes() > 0) {
         val option = readNextInt(
             """
                   > --------------------------------
-                  > |   1) View ALL Boxers          |
-                  > |   2) View ACTIVE Boxers       |
-                  > |   3) View ARCHIVED Boxers     |
+                  > |   1) View ALL boxes          |
+                  > |   2) View ACTIVE boxes       |
+                  > |   3) View ARCHIVED boxes     |
                   > --------------------------------
          > ==>> """.trimMargin(">"))
 
@@ -101,7 +101,7 @@ fun listBoxers() {
             else -> println("Invalid option entered: " + option);
         }
     } else {
-        println("Option Invalid - No Boxers stored");
+        println("Option Invalid - No notes stored");
     }
 }
 
@@ -119,7 +119,7 @@ fun listActiveBoxers() {
 }
 
 fun listArchivedBoxers() {
-    println(boxerAPI.listArchivedBoxers())
+    println(boxersAPI.listArchivedBoxers())
 }
 
 fun numberOfBoxers() {
@@ -127,21 +127,21 @@ fun numberOfBoxers() {
 }
 
 fun updateBoxer() {
-
+    //logger.info { "updateNotes() function invoked" }
     listBoxers()
     if (boxerAPI.numberOfBoxers() > 0) {
-        //only ask the user to choose the Boxer if Boxers exist
-        val indexToUpdate = readNextInt("Enter the index of the Boxer to update: ")
+        //only ask the user to choose the boxer if notes exist
+        val indexToUpdate = readNextInt("Enter the index of the boxer to update: ")
         if (boxerAPI.isValidIndex(indexToUpdate)) {
-            val boxerName = readNextLine("Enter a name for the Boxer: ")
-            var boxerWins = readNextInt("Enter number of wins (1, 2, 3, 4, 5, 6, 7, 8, 9, 10): ")
-            if (!validRange(boxerWins,1,10)){boxerWins = readNextInt("Enter number of wins (1, 2, 3, 4, 5, 6, 7, 8, 9, 10): ") }
+            val boxername = readNextLine("Enter the name of the boxer: ")
+            var boxerWins = readNextInt("Enter the number of wins (1, 2, 3, 4, 5, 6, 7, 8, 9, 10): ")
+            if (!validRange(boxerWins,1,10)){boxerWins = readNextInt("Enter the number of wins (1, 2, 3, 4, 5, 6, 7, 8, 9, 10): ") }
 
-            var boxerClass = readNextLine("Enter a weight class for the Boxer: ")
-            if (!isValidClass(BoxerClass)){boxerClass = readNextLine("Enter a weight class for the Boxer: ")}
+            var boxerClass = readNextLine("Enter a weight class for the boxer: ")
+            if (!isValidClass(boxerClass)){boxerClass = readNextLine("Enter a weight class for the boxer: ")}
 
-            //pass the index of the note and the new note details to NoteAPI for updating and check for success.
-            if (boxerAPI.updateNote(indexToUpdate, Boxer(boxerName, boxerWins, boxerClass, false))) {
+            //pass the index of the boxer and the new boxer's details to BoxerAPI for updating and check for success.
+            if (boxerAPI.updateNote(indexToUpdate, Boxer(boxername, boxerWins, boxerClass, false))) {
                 println("Update Successful")
             } else {
                 println("Update Failed")
@@ -155,13 +155,13 @@ fun updateBoxer() {
 fun deleteBoxer() {
     //logger.info { "deleteNotes() function invoked" }
     listBoxers()
-    if (boxerAPI.numberOfNotes() > 0) {
-        //only ask the user to choose the note to delete if notes exist
-        val indexToDelete = readNextInt("Enter the index of the boxer to delete: ")
-        //pass the index of the note to NoteAPI for deleting and check for success.
+    if (boxerAPI.numberOfBoxers() > 0) {
+        //only ask the user to choose the boxer to delete if boxers exist
+        val indexToDelete = readNextInt("Enter the index of the note to delete: ")
+        //pass the index of the boxer to BoxerAPI for deleting and check for success.
         val boxerToDelete = boxerAPI.deleteBoxer(indexToDelete)
         if (boxerToDelete != null) {
-            println("Delete Successful! Deleted boxer: ${boxerToDelete.boxerName}")
+            println("Delete Successful! Deleted note: ${boxerToDelete.boxerName}")
         } else {
             println("Delete NOT Successful")
         }
@@ -173,8 +173,8 @@ fun archiveBoxer() {
     if (boxerAPI.numberOfActiveBoxers() > 0) {
         //only ask the user to choose the boxer to archive if active boxers exist
         val indexToArchive = readNextInt("Enter the index of the boxer to archive: ")
-        //pass the index of the note to boxerAPI for archiving and check for success.
-        if (boxerAPI.archiveNote(indexToArchive)) {
+        //pass the index of the note to BoxerAPI for archiving and check for success.
+        if (boxerAPI.archiveBoxer(indexToArchive)) {
             println("Archive Successful!")
         } else {
             println("Archive NOT Successful")
@@ -183,10 +183,10 @@ fun archiveBoxer() {
 }
 
 fun searchBoxers() {
-    val searchName = readNextLine("Enter description to search: ")
+    val searchname = readNextLine("Enter description to search: ")
     val searchResults = boxerAPI.searchByName(searchName).toString()
     if (searchResults.isEmpty()) {
-        println("No boxers were found")
+        println("No notes were found")
     } else {
         println(searchResults)
     }

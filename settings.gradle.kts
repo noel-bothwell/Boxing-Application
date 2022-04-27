@@ -1,3 +1,3 @@
 
-rootProject.name = "Boxing-app"
+rootProject.name = "Boxing-App"
 
