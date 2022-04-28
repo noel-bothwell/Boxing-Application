@@ -211,6 +211,6 @@ fun load() {
 }
 
 fun exitApp() {
-    println("Exiting...bye")
+    println("Exiting..bye")
     exit(0)
 }
