@@ -11,7 +11,7 @@ import java.util.*
  * The methods also parse the numeric data entered to ensure it is correct. If it isn't correct,
  * the user is prompted to enter it again.
  *
- * @author Siobhan Drohan and Mairead Meagher
+ * @author Noel Bothwell
  * @version 1.0
  */
 
@@ -77,3 +77,4 @@ object ScannerInput {
         return Scanner(System.`in`).next()[0]
     }
 }
+
