@@ -85,9 +85,9 @@ class BoxerAPI(serializerType: Serializer) {
                 }
             }
             if (listOfBoxers.equals("")) {
-                "No notes with priority: $wins"
+                "No boxers with any wins: $wins"
             } else {
-                "${numberOfBoxersByWins(wins)} notes with priority $wins: $listOfBoxers"
+                "${numberOfBoxersByWins(wins)} boxers with wins $wins: $listOfBoxers"
             }
         }
     }
