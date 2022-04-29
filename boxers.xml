@@ -1,0 +1,22 @@
+<object-stream>
+  <list>
+    <models.Boxer>
+      <boxerName>Jake</boxerName>
+      <boxerWins>4</boxerWins>
+      <boxerClass>featherweight</boxerClass>
+      <isBoxerArchived>false</isBoxerArchived>
+    </models.Boxer>
+    <models.Boxer>
+      <boxerName>Logan</boxerName>
+      <boxerWins>3</boxerWins>
+      <boxerClass>featherweight</boxerClass>
+      <isBoxerArchived>true</isBoxerArchived>
+    </models.Boxer>
+    <models.Boxer>
+      <boxerName>John</boxerName>
+      <boxerWins>1</boxerWins>
+      <boxerClass>middleweight</boxerClass>
+      <isBoxerArchived>false</isBoxerArchived>
+    </models.Boxer>
+  </list>
+</object-stream>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="controllers.BoxerAPITest$ListBoxers" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-04-29T14:11:13" hostname="LAPTOP-M11PNU4P" time="0.596">
+  <properties/>
+  <testcase name="listBoxersBySelectedWins returns No Boxers when ArrayList is empty()" classname="controllers.BoxerAPITest$ListBoxers" time="0.13"/>
+  <testcase name="listArchivedBoxers returns archived boxers when ArrayList has archived boxers stored()" classname="controllers.BoxerAPITest$ListBoxers" time="0.007"/>
+  <testcase name="listAllBoxers returns No Boxers Stored message when ArrayList is empty()" classname="controllers.BoxerAPITest$ListBoxers" time="0.002"/>
+  <testcase name="listBoxersBySelectedWins returns all Boxers that match that amount of wins when boxers with that many wins exist()" classname="controllers.BoxerAPITest$ListBoxers" time="0.42"/>
+  <testcase name="listBoxersBySelectedWins returns no Boxers when no Boxers with the specific amount of wins exist()" classname="controllers.BoxerAPITest$ListBoxers" time="0.003"/>
+  <testcase name="listAllBoxers returns Boxers when ArrayList has boxers stored()" classname="controllers.BoxerAPITest$ListBoxers" time="0.002"/>
+  <testcase name="listActiveBoxers returns active boxers when ArrayList has active boxers stored()" classname="controllers.BoxerAPITest$ListBoxers" time="0.004"/>
+  <testcase name="listArchivedBoxers returns no archived boxers when ArrayList is empty()" classname="controllers.BoxerAPITest$ListBoxers" time="0.001"/>
+  <testcase name="listActiveBoxers returns no active boxers stored when ArrayList is empty()" classname="controllers.BoxerAPITest$ListBoxers" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
