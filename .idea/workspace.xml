@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86c4ee75-ae4a-40a3-8a00-3bdf00e9b79a" name="Changes" comment="added JUNITTesting">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="86c4ee75-ae4a-40a3-8a00-3bdf00e9b79a" name="Changes" comment="made slight change to goodbye message">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boxers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/boxers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/ScannerInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utils/ScannerInput.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/controllers/BoxerAPITest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/controllers/BoxerAPITest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +28,34 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Boxing-app" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Boxing-app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Boxing-app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Boxing-app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -62,67 +93,71 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\noelw\OneDrive\Desktop\2nd year\Mobile app development\Boxing-app\.idea" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\noelw\OneDrive\Desktop\2nd year\Mobile app development\Boxing-app\.idea" />
+      <recent name="C:\Users\noelw\OneDrive\Desktop\2nd year\Mobile app development\Boxing-app" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'Boxing-app.test'">
-    <configuration name="BoxerAPITest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.Boxing-app [build]">
+    <configuration name="Boxing-app [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;controllers.BoxerAPITest&quot;" />
+        <option name="scriptParameters" value="--stacktrace" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ListBoxers.listArchivedBoxers returns no archived boxers when ArrayList is empty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Boxing-app [dokkaJavadoc]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;controllers.BoxerAPITest$ListBoxers.listArchivedBoxers returns no archived boxers when ArrayList is empty&quot;" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
+            <option value="dokkaJavadoc" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SearchMethods.search boxers by name return boxer when boxer with name exist" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Boxing-app [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;controllers.BoxerAPITest$SearchMethods.search boxers by name return boxer when boxer with name exist&quot;" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -148,34 +183,20 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UtilitiesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;utils.UtilitiesTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="Boxing-app.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Boxing-app [build]" />
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Gradle.Boxing-app [test]" />
         <item itemvalue="Gradle.Tests in 'Boxing-app.test'" />
-        <item itemvalue="Gradle.UtilitiesTest" />
-        <item itemvalue="Gradle.BoxerAPITest" />
-        <item itemvalue="Gradle.SearchMethods.search boxers by name return boxer when boxer with name exist" />
-        <item itemvalue="Gradle.ListBoxers.listArchivedBoxers returns no archived boxers when ArrayList is empty" />
+        <item itemvalue="Gradle.Boxing-app [dokkaJavadoc]" />
       </list>
     </recent_temporary>
   </component>
@@ -198,6 +219,9 @@
       <workItem from="1651150957834" duration="1771000" />
       <workItem from="1651152789810" duration="1496000" />
       <workItem from="1651240086934" duration="1875000" />
+      <workItem from="1651243904652" duration="1754000" />
+      <workItem from="1651245722295" duration="1747000" />
+      <workItem from="1651247558222" duration="435000" />
     </task>
     <task id="LOCAL-00001" summary="added package called collection and a api file called BoxerAPI">
       <created>1651087921828</created>
@@ -220,7 +244,42 @@
       <option name="project" value="LOCAL" />
       <updated>1651140653704</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added gitignore file">
+      <created>1651243468031</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651243468031</updated>
+    </task>
+    <task id="LOCAL-00005" summary="updated gitignore file to ignore the gradle and build files">
+      <created>1651243708738</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651243708738</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updated gitignore file to ignore the gradle and build files">
+      <created>1651244387479</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1651244387480</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated gitignore file to ignore the gradle and build files">
+      <created>1651244549175</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651244549175</updated>
+    </task>
+    <task id="LOCAL-00008" summary="made slight change to goodbye message">
+      <created>1651244677212</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1651244677212</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,9 +314,12 @@
     <MESSAGE value="added package called models and a data class called boxer" />
     <MESSAGE value="trying to fix merge error still" />
     <MESSAGE value="added validation by creating two classes called validation and ClassValidation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added validation by creating two classes called validation and ClassValidation" />
+    <MESSAGE value="added gitignore file" />
+    <MESSAGE value="updated gitignore file to ignore the gradle and build files" />
+    <MESSAGE value="made slight change to goodbye message" />
+    <option name="LAST_COMMIT_MESSAGE" value="made slight change to goodbye message" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Boxing_app$Tests_in__Boxing_app_test_.ic" NAME="Tests in 'Boxing-app.test' Coverage Results" MODIFIED="1651241455370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Boxing_app$Tests_in__Boxing_app_test_.ic" NAME="Tests in 'Boxing-app.test' Coverage Results" MODIFIED="1651246568066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
