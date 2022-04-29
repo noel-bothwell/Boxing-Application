@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="utils.UtilitiesTest$isValidClass" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-04-29T14:11:14" hostname="LAPTOP-M11PNU4P" time="0.077">
+  <properties/>
+  <testcase name="isValidClassFalseWhenClassDoesNotExist()" classname="utils.UtilitiesTest$isValidClass" time="0.06"/>
+  <testcase name="isValidCategoryTrueWhenCategoryExists()" classname="utils.UtilitiesTest$isValidClass" time="0.011"/>
+  <testcase name="classesReturnsFullClassesSet()" classname="utils.UtilitiesTest$isValidClass" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

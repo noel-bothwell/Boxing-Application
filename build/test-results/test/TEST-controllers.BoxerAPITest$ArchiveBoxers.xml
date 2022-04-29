@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="controllers.BoxerAPITest$ArchiveBoxers" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-04-29T14:11:13" hostname="LAPTOP-M11PNU4P" time="0.01">
+  <properties/>
+  <testcase name="archiving an active boxer that exists returns true and archives()" classname="controllers.BoxerAPITest$ArchiveBoxers" time="0.002"/>
+  <testcase name="archiving an already archived boxer returns false()" classname="controllers.BoxerAPITest$ArchiveBoxers" time="0.002"/>
+  <testcase name="archiving a boxer that does not exist returns false()" classname="controllers.BoxerAPITest$ArchiveBoxers" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
