@@ -59,7 +59,7 @@ fun mainMenu(): Int {
          > |---------------------------------|
          > |   20) Save boxers               |
          > |   21) Load boxers               |
-         > |   0) Exit                       |
+         > |   0)  Exit                       |
          > ----------------------------------
          > ==>> """.trimMargin(">")
     )
@@ -211,6 +211,6 @@ fun load() {
 }
 
 fun exitApp() {
-    println("Exiting..bye")
+    println("Exiting..bye..Thank You..")
     exit(0)
 }
