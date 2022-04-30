@@ -27,10 +27,8 @@ fun runMenu() {
             3 -> updateBoxer()
             4 -> deleteBoxer()
             5 -> archiveBoxer()
-            6 -> firstBoxer()
-            7 -> listArchivedBoxers()
-            8 -> numberOfBoxers()
-            9 -> searchBoxers()
+            6 -> numberOfBoxers()
+            7 -> searchBoxers()
             20 -> save()
             21 -> load()
             0 -> exitApp()
@@ -51,11 +49,9 @@ fun mainMenu(): Int {
          > |   3) Update a boxer             |
          > |   4) Delete a boxer             |
          > |   5) Archive a boxer            |
-         > |   6) List first boxer           |
-         > |   7) List archived boxers       |
-         > |   8) number of boxers           |
+         > |   6) number of boxers           |
          > |---------------------------------|
-         > |   9) Search boxers              |
+         > |   7) Search boxers              |
          > |---------------------------------|
          > |   20) Save boxers               |
          > |   21) Load boxers               |
@@ -91,13 +87,14 @@ fun addBoxer() {
 }
 
 fun listBoxers() {
-    if (boxerAPI.numberOfBoxers() > 0) {
+    if (boxerAPI.numberOfTotalBoxers() > 0) {
         val option = readNextInt(
             """
                   > --------------------------------
                   > |   1) View ALL boxers          |
                   > |   2) View ACTIVE boxers       |
                   > |   3) View ARCHIVED boxers     |
+                  > |   4) View FIRST boxer         |
                   > --------------------------------
          > ==>> """.trimMargin(">"))
 
@@ -105,12 +102,48 @@ fun listBoxers() {
             1 -> listAllBoxers()
             2 -> listActiveBoxers()
             3 -> listArchivedBoxers()
+            4 -> firstBoxer()
             else -> println("Invalid option entered: " + option)
         }
     } else {
-        println("Option Invalid - No notes stored")
+        println("Option Invalid - No boxers stored")
     }
 }
+
+fun numberOfBoxers() {
+    if (boxerAPI.numberOfTotalBoxers() > 0) {
+        val option = readNextInt(
+            """
+                  > --------------------------------
+                  > |   1) Number of total boxers   |
+                  > |   2) Number of Active boxers  |
+                  > |   3) Number of Archived boxers|
+                  > --------------------------------
+         > ==>> """.trimMargin(">"))
+
+        when (option) {
+            1 -> numberOfTotalBoxers()
+            2 -> numberOfActiveBoxers()
+            3 -> numberOfArchivedBoxers()
+            else -> println("Invalid option entered: " + option)
+        }
+    } else {
+        println("Option Invalid - No boxers stored")
+    }
+}
+
+fun numberOfTotalBoxers() {
+    println(boxerAPI.numberOfTotalBoxers())
+}
+
+fun numberOfActiveBoxers() {
+    println(boxerAPI.numberOfActiveBoxers())
+}
+
+fun numberOfArchivedBoxers() {
+    println(boxerAPI.numberOfArchivedBoxers())
+}
+
 
 fun firstBoxer() {
     println(boxerAPI.firstBoxer())
@@ -129,15 +162,13 @@ fun listArchivedBoxers() {
     println(boxerAPI.listArchivedBoxers())
 }
 
-fun numberOfBoxers() {
-    println(boxerAPI.numberOfBoxers())
-}
+
 
 fun updateBoxer() {
-    //logger.info { "updateNotes() function invoked" }
+
     listBoxers()
-    if (boxerAPI.numberOfBoxers() > 0) {
-        //only ask the user to choose the boxer if notes exist
+    if (boxerAPI.numberOfTotalBoxers() > 0) {
+        //only ask the user to choose the boxer if boxers exist
         val indexToUpdate = readNextInt("Enter the index of the boxer to update: ")
         if (boxerAPI.isValidIndex(indexToUpdate)) {
             val boxername = readNextLine("Enter the name of the boxer: ")
@@ -167,9 +198,9 @@ fun updateBoxer() {
 }
 
 fun deleteBoxer() {
-    //logger.info { "deleteNotes() function invoked" }
+
     listBoxers()
-    if (boxerAPI.numberOfBoxers() > 0) {
+    if (boxerAPI.numberOfTotalBoxers() > 0) {
         //only ask the user to choose the boxer to delete if boxers exist
         val indexToDelete = readNextInt("Enter the index of the note to delete: ")
         //pass the index of the boxer to BoxerAPI for deleting and check for success.
@@ -198,7 +229,7 @@ fun archiveBoxer() {
 
 fun searchBoxers() {
     val searchName = readNextLine("Enter name to search: ")
-    val searchResults = boxerAPI.searchByName(searchName).toString()
+    val searchResults = boxerAPI.searchByName(searchName)
     if (searchResults.isEmpty()) {
         println("No boxers were found")
     } else {
