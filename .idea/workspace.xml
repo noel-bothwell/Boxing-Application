@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86c4ee75-ae4a-40a3-8a00-3bdf00e9b79a" name="Changes" comment="made slight change to goodbye message">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="86c4ee75-ae4a-40a3-8a00-3bdf00e9b79a" name="Changes" comment="- applied the gradle tasks into practice&#10;- slightly updated the build.gradle.kts file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boxers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/boxers.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/ScannerInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utils/ScannerInput.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/controllers/BoxerAPITest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/controllers/BoxerAPITest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boxers.json" beforeDir="false" afterPath="$PROJECT_DIR$/boxers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +95,7 @@
       <recent name="C:\Users\noelw\OneDrive\Desktop\2nd year\Mobile app development\Boxing-app" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Boxing-app [build]">
+  <component name="RunManager" selected="Kotlin.MainKt">
     <configuration name="Boxing-app [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -192,8 +189,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Boxing-app [build]" />
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Gradle.Boxing-app [build]" />
         <item itemvalue="Gradle.Boxing-app [test]" />
         <item itemvalue="Gradle.Tests in 'Boxing-app.test'" />
         <item itemvalue="Gradle.Boxing-app [dokkaJavadoc]" />
@@ -222,6 +219,7 @@
       <workItem from="1651243904652" duration="1754000" />
       <workItem from="1651245722295" duration="1747000" />
       <workItem from="1651247558222" duration="435000" />
+      <workItem from="1651331911565" duration="1703000" />
     </task>
     <task id="LOCAL-00001" summary="added package called collection and a api file called BoxerAPI">
       <created>1651087921828</created>
