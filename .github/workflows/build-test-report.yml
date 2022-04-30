@@ -27,10 +27,24 @@ jobs:
       - name: Build with Gradle 
         run: ./gradlew build -x test
         
+      # Builds a zip file with JUnit test report in it
+      - name: Archive test report
+        uses: actions/upload-artifact@v2
+        with:
+         name: Test report
+         path: build/reports/tests/test
+        
+      # Builds a zip file with JUnit code coverage report in it
+      - name: Archive coverage report
+        uses: actions/upload-artifact@v2
+        with:
+         name: Code Coverage report
+         path: build/reports/jacoco/test/html
+        
       #Builds a "fat" jar file with the dependencies from Gradle
       - name: Archive Jar with Dependencies
         uses: actions/upload-artifact@v2
         with:
-        name: Jar with Dependencies
-        path: build/libs
+         name: Jar with Dependencies
+         path: build/libs
         
