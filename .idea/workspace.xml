@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86c4ee75-ae4a-40a3-8a00-3bdf00e9b79a" name="Changes" comment="- applied the gradle tasks into practice&#10;- slightly updated the build.gradle.kts file">
+    <list default="true" id="86c4ee75-ae4a-40a3-8a00-3bdf00e9b79a" name="Changes" comment="refactored updateBoxer and addBoxer functions to use do while instead of if statements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boxers.json" beforeDir="false" afterPath="$PROJECT_DIR$/boxers.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/controllers/BoxerAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/controllers/BoxerAPI.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,6 +220,8 @@
       <workItem from="1651245722295" duration="1747000" />
       <workItem from="1651247558222" duration="435000" />
       <workItem from="1651331911565" duration="1703000" />
+      <workItem from="1651333973130" duration="1768000" />
+      <workItem from="1651335794357" duration="1138000" />
     </task>
     <task id="LOCAL-00001" summary="added package called collection and a api file called BoxerAPI">
       <created>1651087921828</created>
@@ -315,7 +317,8 @@
     <MESSAGE value="added gitignore file" />
     <MESSAGE value="updated gitignore file to ignore the gradle and build files" />
     <MESSAGE value="made slight change to goodbye message" />
-    <option name="LAST_COMMIT_MESSAGE" value="made slight change to goodbye message" />
+    <MESSAGE value="refactored updateBoxer and addBoxer functions to use do while instead of if statements" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored updateBoxer and addBoxer functions to use do while instead of if statements" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Boxing_app$Tests_in__Boxing_app_test_.ic" NAME="Tests in 'Boxing-app.test' Coverage Results" MODIFIED="1651246568066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

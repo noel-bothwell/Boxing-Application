@@ -95,7 +95,7 @@ class BoxerAPI(serializerType: Serializer) {
 
     //  counting methods
 
-    fun numberOfBoxers(): Int {
+    fun numberOfTotalBoxers(): Int {
         return boxers.size
     }
 
@@ -105,7 +105,6 @@ class BoxerAPI(serializerType: Serializer) {
 
     fun numberOfBoxersByWins(wins: Int): Int =
         boxers.count({it.boxerWins==wins})
-
 
 
     //  searching methods
