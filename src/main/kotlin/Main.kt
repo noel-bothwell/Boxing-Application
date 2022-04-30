@@ -59,7 +59,7 @@ fun mainMenu(): Int {
          > |---------------------------------|
          > |   20) Save boxers               |
          > |   21) Load boxers               |
-         > |   0)  Exit                       |
+         > |   0)  Exit                      |
          > ----------------------------------
          > ==>> """.trimMargin(">")
     )
@@ -68,11 +68,18 @@ fun mainMenu(): Int {
 fun addBoxer() {
 
     val boxerName = readNextLine("Enter a name for the boxer: ")
-    var boxerWins = readNextInt("Enter the number of wins (1, 2, 3, 4, 5, 6, 7, 8, 9, 10): ")
-    if (!validRange(boxerWins,1,10)){boxerWins = readNextInt("Enter the number of wins (1, 2, 3, 4, 5, 6, 7, 8, 9, 10): ") }
 
-    var boxerClass = readNextLine("Enter a weight class for the boxer: ")
-    if (!isValidClass(boxerClass)){boxerClass = readNextLine("Enter a weight class for the boxer: ")}
+    var boxerWins: Int
+    do {
+        boxerWins = readNextInt("Enter the number of wins (1, 2, 3, 4, 5, 6, 7, 8, 9, 10): ")
+    }
+    while (!validRange(boxerWins,1,10))
+
+    var boxerClass: String
+    do {
+        boxerClass = readNextLine("Enter a weight class for the boxer: ")
+    }
+    while (!isValidClass(boxerClass))
 
     val isAdded = boxerAPI.add(Boxer(boxerName, boxerWins, boxerClass, false))
 
@@ -134,11 +141,18 @@ fun updateBoxer() {
         val indexToUpdate = readNextInt("Enter the index of the boxer to update: ")
         if (boxerAPI.isValidIndex(indexToUpdate)) {
             val boxername = readNextLine("Enter the name of the boxer: ")
-            var boxerWins = readNextInt("Enter the number of wins (1, 2, 3, 4, 5, 6, 7, 8, 9, 10): ")
-            if (!validRange(boxerWins,1,10)){boxerWins = readNextInt("Enter the number of wins (1, 2, 3, 4, 5, 6, 7, 8, 9, 10): ") }
 
-            var boxerClass = readNextLine("Enter a weight class for the boxer: ")
-            if (!isValidClass(boxerClass)){boxerClass = readNextLine("Enter a weight class for the boxer: ")}
+            var boxerWins: Int
+            do {
+                boxerWins = readNextInt("Enter the number of wins (1, 2, 3, 4, 5, 6, 7, 8, 9, 10): ")
+            }
+                while (!validRange(boxerWins,1,10))
+
+            var boxerClass: String
+            do {
+                boxerClass = readNextLine("Enter a weight class for the boxer: ")
+            }
+            while (!isValidClass(boxerClass))
 
             //pass the index of the boxer and the new boxer's details to BoxerAPI for updating and check for success.
             if (boxerAPI.updateBoxer(indexToUpdate, Boxer(boxername, boxerWins, boxerClass, false))) {
